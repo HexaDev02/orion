@@ -28,8 +28,15 @@ local OrionLib = {
 local Icons = {}
 
 local Success, Response = pcall(function()
-	Icons = HttpService:JSONDecode(game:HttpGetAsync("https://raw.githubusercontent.com/evoincorp/lucideblox/master/src/modules/util/icons.json")).icons
+    return game:HttpGet("https://raw.githubusercontent.com/evoincorp/lucideblox/master/src/modules/util/icons.json")
 end)
+
+if Success then
+    Icons = HttpService:JSONDecode(Response).icons or {}
+else
+    warn("Impossible de récupérer les icônes, HTTP bloqué sur JJSploit.")
+    Icons = {}
+end
 
 if not Success then
 	warn("\nOrion Library - Failed to load Feather Icons. Error code: " .. Response .. "\n")
