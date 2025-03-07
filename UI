@@ -31,13 +31,6 @@ local Success, Response = pcall(function()
     return game:HttpGet("https://raw.githubusercontent.com/evoincorp/lucideblox/master/src/modules/util/icons.json")
 end)
 
-if Success then
-    Icons = HttpService:JSONDecode(Response).icons or {}
-else
-    warn("Impossible de récupérer les icônes, HTTP bloqué sur JJSploit.")
-    Icons = {}
-end
-
 if not Success then
 	warn("\nOrion Library - Failed to load Feather Icons. Error code: " .. Response .. "\n")
 end	
@@ -52,38 +45,23 @@ end
 
 local Orion = Instance.new("ScreenGui")
 Orion.Name = "Orion"
-if syn then
-	syn.protect_gui(Orion)
-	Orion.Parent = game.CoreGui
-else
-	Orion.Parent = gethui() or game.CoreGui
-end
+Orion.Parent = game.CoreGui  -- Utilisation directe de game.CoreGui
 
-if gethui then
-	for _, Interface in ipairs(gethui():GetChildren()) do
-		if Interface.Name == Orion.Name and Interface ~= Orion then
-			Interface:Destroy()
-		end
-	end
-else
-	for _, Interface in ipairs(game.CoreGui:GetChildren()) do
-		if Interface.Name == Orion.Name and Interface ~= Orion then
-			Interface:Destroy()
-		end
+-- Suppression des interfaces déjà existantes avec le même nom
+for _, Interface in ipairs(game.CoreGui:GetChildren()) do
+	if Interface.Name == Orion.Name and Interface ~= Orion then
+		Interface:Destroy()
 	end
 end
 
+-- Fonction pour vérifier si le menu est actif
 function OrionLib:IsRunning()
-	if gethui then
-		return Orion.Parent == gethui()
-	else
-		return Orion.Parent == game:GetService("CoreGui")
-	end
-
+	return Orion.Parent == game.CoreGui
 end
 
+-- Fonction pour ajouter une connexion sécurisée
 local function AddConnection(Signal, Function)
-	if (not OrionLib:IsRunning()) then
+	if not OrionLib:IsRunning() then
 		return
 	end
 	local SignalConnect = Signal:Connect(Function)
@@ -91,8 +69,9 @@ local function AddConnection(Signal, Function)
 	return SignalConnect
 end
 
+-- Nettoyage des connexions lorsque le script s'arrête
 task.spawn(function()
-	while (OrionLib:IsRunning()) do
+	while OrionLib:IsRunning() do
 		wait()
 	end
 
