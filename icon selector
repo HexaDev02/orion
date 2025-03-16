@@ -1,0 +1,116 @@
+local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/zyn1x-tts/orion/refs/heads/main/UI'))()
+
+-- Créer la fenêtre
+local Window = OrionLib:MakeWindow({
+    Name = "Icon Tabs Select",
+    HidePremium = false,
+    SaveConfig = true,
+    ConfigFolder = "DDN Hub"
+})
+-- Section 1
+local Section1 = Window:MakeTab({
+    Name = "Section 1",
+    Icon = "rbxassetid://3944703587",  -- Icône 3944703587
+    PremiumOnly = false
+})
+
+-- Section 2
+local Section2 = Window:MakeTab({
+    Name = "Section 2",
+    Icon = "rbxassetid://3944680095",  -- Icône 3944680095
+    PremiumOnly = false
+})
+
+-- Section 3
+local Section3 = Window:MakeTab({
+    Name = "Section 3",
+    Icon = "rbxassetid://7072706796",  -- Icône 7072706796
+    PremiumOnly = false
+})
+
+-- Section 4
+local Section4 = Window:MakeTab({
+    Name = "Section 4",
+    Icon = "rbxassetid://4805639000",  -- Icône 4805639000
+    PremiumOnly = false
+})
+
+-- Section 5
+local Section5 = Window:MakeTab({
+    Name = "Section 5",
+    Icon = "rbxassetid://4155801252",  -- Icône 4155801252
+    PremiumOnly = false
+})
+
+-- Section 6
+local Section6 = Window:MakeTab({
+    Name = "Section 6",
+    Icon = "rbxassetid://4483345875",  -- Icône 4483345875
+    PremiumOnly = false
+})
+
+-- Section 7
+local Section7 = Window:MakeTab({
+    Name = "Section 7",
+    Icon = "rbxassetid://3610239960",  -- Icône 3610239960
+    PremiumOnly = false
+})
+
+-- Section 8
+local Section8 = Window:MakeTab({
+    Name = "Section 8",
+    Icon = "rbxassetid://7072720870",  -- Icône 7072720870
+    PremiumOnly = false
+})
+
+-- Section 9
+local Section9 = Window:MakeTab({
+    Name = "Section 9",
+    Icon = "rbxassetid://7072719338",  -- Icône 7072719338
+    PremiumOnly = false
+})
+
+-- Section 10
+local Section10 = Window:MakeTab({
+    Name = "Section 10",
+    Icon = "rbxassetid://3523728077",  -- Icône 3523728077
+    PremiumOnly = false
+})
+
+-- Section 11
+local Section11 = Window:MakeTab({
+    Name = "Section 11",
+    Icon = "rbxassetid://4031889928",  -- Icône 4031889928
+    PremiumOnly = false
+})
+
+-- Section 12
+local Section12 = Window:MakeTab({
+    Name = "Section 12",
+    Icon = "rbxassetid://7072725342",  -- Icône 7072725342
+    PremiumOnly = false
+})
+
+-- Section 13 (nouveau)
+local Section13 = Window:MakeTab({
+    Name = "Section 13",
+    Icon = "rbxassetid://8834748103",  -- Icône 8834748103
+    PremiumOnly = false
+})
+
+-- Section 14 (nouveau)
+local Section14 = Window:MakeTab({
+    Name = "Section 14",
+    Icon = "rbxassetid://4384403532",  -- Icône 4384403532
+    PremiumOnly = false
+})
+
+-- Section 15 (nouveau)
+local Section15 = Window:MakeTab({
+    Name = "Section 15",
+    Icon = "rbxassetid://7445543667",  -- Icône 7445543667
+    PremiumOnly = false
+})
+
+-- Initialiser Orion
+OrionLib:Init()
