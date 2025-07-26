@@ -22,25 +22,19 @@ local OrionLib = {
 
 	Flags = {},
 
-	Themes = {
+Themes = {
 
-		Default = {
+	Default = {
 
-			Main = Color3.fromRGB(25, 25, 25),
+		Main = Color3.fromRGB(255, 183, 197),      -- Fond principal rose pastel
+		Second = Color3.fromRGB(255, 145, 164),    -- Couleur secondaire, un rose plus chaud
+		Stroke = Color3.fromRGB(255, 128, 171),    -- Pour les contours, un rose plus saturé
+		Divider = Color3.fromRGB(255, 204, 204),   -- Séparateurs clairs, doux et visibles
+		Text = Color3.fromRGB(80, 20, 60),         -- Texte foncé pour contraster avec le fond
+		TextDark = Color3.fromRGB(150, 70, 100)    -- Texte secondaire, un peu plus doux
+	}
 
-			Second = Color3.fromRGB(32, 32, 32),
-
-			Stroke = Color3.fromRGB(60, 60, 60),
-
-			Divider = Color3.fromRGB(60, 60, 60),
-
-			Text = Color3.fromRGB(240, 240, 240),
-
-			TextDark = Color3.fromRGB(150, 150, 150)
-
-		}
-
-	},
+},
 
 	SelectedTheme = "Default",
 
