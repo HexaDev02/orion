@@ -13,12 +13,12 @@ local OrionLib = {
 	Themes = {
 	Default = {
 
-		Main = Color3.fromRGB(12, 35, 180),        -- Bleu principal, légèrement plus foncé que (16, 42, 220)
-		Second = Color3.fromRGB(10, 30, 150),      -- Bleu secondaire, encore un peu plus assombri
+		Main = Color3.fromRGB(10, 8, 15),          -- Noir avec un soupçon de violet (fond principal)
+		Second = Color3.fromRGB(20, 15, 30),       -- Un peu plus violet mais toujours très foncé
 		Stroke = Color3.fromRGB(255, 255, 255),    -- Contours en blanc
-		Divider = Color3.fromRGB(255, 255, 255),   -- Séparateurs aussi en blanc
-		Text = Color3.fromRGB(255, 255, 255),      -- Texte principal en blanc
-		TextDark = Color3.fromRGB(220, 220, 255)   -- Texte secondaire légèrement bleuté
+		Divider = Color3.fromRGB(255, 255, 255),   -- Diviseurs en blanc
+		Text = Color3.fromRGB(255, 255, 255),      -- Texte blanc bien lisible
+		TextDark = Color3.fromRGB(200, 190, 230)   -- Texte secondaire avec une légère teinte violette
 	}
 
 },
