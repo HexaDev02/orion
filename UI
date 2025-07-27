@@ -11,14 +11,15 @@ local OrionLib = {
 	Connections = {},
 	Flags = {},
 	Themes = {
+
 	Default = {
 
-		Main = Color3.fromRGB(40, 60, 90),       -- Bleu sombre mais doux
-		Second = Color3.fromRGB(60, 90, 130),    -- Bleu un peu plus clair pour les éléments secondaires
-		Stroke = Color3.fromRGB(80, 110, 150),   -- Contours légèrement plus clairs
-		Divider = Color3.fromRGB(80, 110, 150),  -- Séparateurs assortis aux contours
-		Text = Color3.fromRGB(255, 255, 255),    -- Texte blanc bien lisible
-		TextDark = Color3.fromRGB(200, 200, 200) -- Texte gris clair pour moins d’importance
+		Main = Color3.fromRGB(15, 25, 45),        -- Bleu très foncé, ambiance "gendarmerie"
+		Second = Color3.fromRGB(25, 40, 70),      -- Un bleu un peu moins foncé pour les éléments secondaires
+		Stroke = Color3.fromRGB(40, 60, 90),      -- Contours visibles mais discrets
+		Divider = Color3.fromRGB(40, 60, 90),     -- Même chose pour les séparateurs
+		Text = Color3.fromRGB(255, 255, 255),     -- Texte bien blanc, lisible sur fond sombre
+		TextDark = Color3.fromRGB(180, 180, 200)  -- Texte secondaire un peu grisé
 	}
 
 },
